@@ -1,0 +1,9 @@
+main: eu.donals.badmin.Badmin
+name: Badmin
+version: 1.15.1
+description: Server administration for bad admins
+
+commands:
+  slime:
+    description: makes the targeted player slimy
+    usage: /slime
