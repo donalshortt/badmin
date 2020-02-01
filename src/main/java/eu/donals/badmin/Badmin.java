@@ -1,5 +1,6 @@
 package eu.donals.badmin;
 
+import eu.donals.badmin.commands.CommandSlime;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Badmin extends JavaPlugin {
