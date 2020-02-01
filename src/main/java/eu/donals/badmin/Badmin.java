@@ -1,8 +1,5 @@
 package eu.donals.badmin;
 
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
-import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Badmin extends JavaPlugin {
@@ -11,7 +8,11 @@ public class Badmin extends JavaPlugin {
     public void onEnable() {
         getLogger().info("Badmin successfully enabled");
 
+        // Commands
         this.getCommand("slime").setExecutor(new CommandSlime());
+
+        // Listeners
+        getServer().getPluginManager().registerEvents(new BlockEvents(), this);
     }
 }
 

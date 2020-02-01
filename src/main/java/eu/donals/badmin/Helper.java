@@ -6,24 +6,15 @@ import org.bukkit.entity.EntityType;
 
 public final class Helper {
 
-    protected void spawnEntitysAroundCommander(World world, Location location, EntityType entity){
+    protected void spawnEntitiesAroundCommander(World world, Location location, EntityType entity){
 
-        //hmm very ugly
-        location.add(3, 0, 0);
-        world.spawnEntity(location, entity);
-        location.add(0, 0, 3);
-        world.spawnEntity(location, entity);
-        location.subtract(3, 0, 0);
-        world.spawnEntity(location, entity);
-        location.subtract(3, 0, 0);
-        world.spawnEntity(location, entity);
-        location.subtract(0, 0, 3);
-        world.spawnEntity(location, entity);
-        location.subtract(0, 0, 3);
-        world.spawnEntity(location, entity);
-        location.add(3, 0, 0);
-        world.spawnEntity(location, entity);
-        location.add(3, 0 , 0);
-        world.spawnEntity(location, entity);
+        for (int x = -3; x <= 3; x += 3){
+            for (int z = -3; z <= 3; z += 3){
+                Location spawn_location = location.clone();
+                spawn_location.add(x, 0, z);
+                if (x == 0 && z == 0) {continue;}
+                world.spawnEntity(spawn_location, entity);
+            }
+        }
     }
 }
