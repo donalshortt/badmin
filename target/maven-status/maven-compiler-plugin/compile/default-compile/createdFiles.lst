@@ -1,3 +1,5 @@
-eu/donals/badmin/CommandSlime.class
+eu/donals/badmin/tasks/RestoreModifiedBlocks.class
+eu/donals/badmin/BlockEvents.class
+eu/donals/badmin/commands/CommandSlime.class
 eu/donals/badmin/Helper.class
 eu/donals/badmin/Badmin.class
